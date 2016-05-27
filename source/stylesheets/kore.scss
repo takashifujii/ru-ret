@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'PixelMplus12';
+  src: local('/font/PixelMplus12-Regular.ttf');
+}
+
+body{
+  font-family: PixelMplus12;
+}
+
+ul{
+  margin: 0;
+}
+
+h1{
+  font-size: 45px;
+  font-weight: normal;
+  margin: 80px 0 40px;
+}
+
+#text{
+  font-size: 60px;
+}
+
+#button{
+  display: inline-block;
+  width: 300px;
+  position: relative;
+  border-radius: 4px;
+  color: #fff;
+  line-height: 52px;
+  -webkit-transition: none;
+  transition: none;
+  &.active{
+    background-color: #2647FB;
+    box-shadow: 0 3px 0 #1E3863;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    &:hover{
+      top: -4px;
+      box-shadow: 0 7px 0 #1E3863;
+    }
+    &:active{
+      top: 3px;
+      box-shadow: none;
+    } 
+  }
+}
+
+
+#list{
+  display: block;
+  width: 118px;
+  margin: 40px auto;
+  text-align: left;
+  li{
+    font-size: 21px;
+    list-style-type: decimal;
+    padding-bottom: 8px;
+  }
+}
