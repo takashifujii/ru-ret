@@ -6,7 +6,7 @@ $(function(){
   const $button = $("#button");
   const $list = $("#list");
 
-  let max = 8;
+  let max = NAMES.length - 1;
   let isStop = false;
   let interval, randomNum;
 
