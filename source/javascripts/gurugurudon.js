@@ -1,6 +1,6 @@
 $(function(){
 
-  let NAMES = ["福岡 陽","藤井 隆史","安藤 勝","小林 慎平","城島 由紀子","豊嶋 七瀬","稲葉 優一郎","林 信輔","増田 有紗"];
+  let NAMES = ["福岡 陽","藤井 隆史","安藤 勝","河田 秋菜","溝部 夏海","香川 彩","加田木 智也","そめひこ"];
 
   const $text = $("#text");
   const $button = $("#button");
@@ -13,16 +13,16 @@ $(function(){
   interval = setInterval(ruuuurettoppoi, 1);
 
   $button.on('click', function(){
-    if(!isStop){
-      clearInterval(interval);
+    // if(!isStop){
+      // clearInterval(interval);
 
       list_ni_sonyu(NAMES[randomNum]);
       NAMES.splice(randomNum, 1);
       max--;
-    } else {
-      interval = setInterval(ruuuurettoppoi, 1);
-    }
-    isStop = !isStop;
+    // } else {
+    //   interval = setInterval(ruuuurettoppoi, 1);
+    // }
+    // isStop = !isStop;
   });
 
   function list_ni_sonyu(name){
