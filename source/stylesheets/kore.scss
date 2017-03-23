@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'PixelMplus12';
+  src: local('/font/PixelMplus12-Regular.ttf');
+}
+
+body{
+  font-family: PixelMplus12;
+}
+
+ul{
+  margin: 0;
+}
+
+h1{
+  font-size: 45px;
+  font-weight: normal;
+  margin: 80px 0 40px;
+}
+a{
+  text-decoration: none;
+}
+
+#text{
+  font-size: 60px;
+}
+
+@mixin buttonColor($status, $back, $shadow) {
+  #{$status}{
+    background-color: $back;
+    box-shadow: 0 3px 0 $shadow;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    &:hover{
+      top: -4px;
+      box-shadow: 0 7px 0 $shadow;
+    }
+    &:active{
+      top: 3px;
+      box-shadow: none;
+    }
+  }
+}
+
+.button{
+  display: inline-block;
+  width: 300px;
+  position: relative;
+  border-radius: 4px;
+  color: #fff;
+  line-height: 52px;
+  -webkit-transition: none;
+  transition: none;
+
+  @include buttonColor("&.active", #2647FB, #1E3863);
+  @include buttonColor("&.start", #FB26AD, #631E46);
+  @include buttonColor("&.stop", #2647FB, #1E3863);
+  @include buttonColor("&.reset", #61FB26, #1E6328);
+
+}
+
+.timer{
+  .button{
+    width: 150px;
+  }
+  #time{
+    margin: 90px 0 150px;
+    font-size: 120px;
+    .min, .sec{
+      font-size: 250px;
+    }
+    &.half{
+      color: green;
+      &.one{
+        color: yellow;
+        &.death{
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+
+#list{
+  display: block;
+  width: 118px;
+  margin: 40px auto;
+  text-align: left;
+  li{
+    font-size: 21px;
+    list-style-type: decimal;
+    padding-bottom: 8px;
+  }
+}
